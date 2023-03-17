@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="estados-cidades.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="processa-formulario.php" method="post"  >
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <i class="bi bi-three-dots" style="font-size: 2rem;"></i>
+                </div>
+            </nav>
+            <div class="mt-5"></div>
+                <div class="centralizar">
+                    <h1>MINISTÉRIO DA SÁUDE</h1>
+                    <h7>CONTROLE EPIDEMIOLÓGICO</h7>
+                </div>
+            <div class="mt-5">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="basic-url" class="form-label">UF</label>
+                        <select id="estado" onchange="buscaCidades(this.value)" class="form-select uf borda" aria-label="Default select example" required>
+                            <option selected value="">Selecione:</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espirito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label for="basic-url" class="form-label">MUNÍCIPIO</label>
+                        <select id="cidade" class="form-select borda"aria-label="Default select example" required>
+                            <option selected value="">Selecione:</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <label for="basic-url" class="form-label">INSTITUIÇÃO</label>
+                        <div class="input">
+                            <input type="text" name="instituicao" class="form-control borda" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <label for="basic-url" class="form-label">GESTOR</label>
+                        <div class="input">
+                            <input type="text" name="gestor" class="form-control borda" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <div class="input">
+                            <label for="basic-url" class="form-label">PACIENTE</label>
+                            <input type="text" name="paciente" class="form-control borda" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input">
+                            <label for="basic-url" class="form-label">CPF</label>
+                            <input type="text" name="cpf" class="form-control borda" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="centralizar mt-4">
+                    <input type="submit" class="btn btn-dark borda" value="Reportar">   
+                </div>
+            </div>
+            
+        </div>
+    </form>
+</body>
+</html>
