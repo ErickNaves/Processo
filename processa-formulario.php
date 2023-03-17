@@ -20,6 +20,6 @@
         $gest . "<br>" . "Paciente: " . $pac . "<br>" . "CPF: " . $cpf . "<br>");
 
     } else {
-        echo "Erro!";
+        echo "Erro, CPF inválido!";
     };   
 ?>
