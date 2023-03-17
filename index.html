@@ -27,7 +27,7 @@
                 <div class="row">
                     <div class="col-6">
                         <label for="basic-url" class="form-label">UF</label>
-                        <select id="estado" onchange="buscaCidades(this.value)" class="form-select uf borda" aria-label="Default select example" required>
+                        <select id="estado" name="estados" onchange="buscaCidades(this.value)" class="form-select uf borda" aria-label="Default select example" required>
                             <option selected value="">Selecione:</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="col-6">
                         <label for="basic-url" class="form-label">MUNÍCIPIO</label>
-                        <select id="cidade" class="form-select borda"aria-label="Default select example" required>
+                        <select id="cidade" name="cidades" class="form-select borda"aria-label="Default select example" required>
                             <option selected value="">Selecione:</option>
                         </select>
                     </div>
